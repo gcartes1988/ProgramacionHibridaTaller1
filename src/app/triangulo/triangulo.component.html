@@ -1,0 +1,30 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Triángulo</ion-card-title>
+    <p>El perímetro de un triángulo es la suma de las longitudes de sus lados. En otras palabras, es la medida total del contorno o borde del triángulo.</p>
+    <ion-img src="https://www.neurochispas.com/wp-content/uploads/2022/07/Formulas-del-perimetro-y-del-area-de-un-triangulo.png" alt="perimetro de un circulo"></ion-img>
+  </ion-card-header>
+  
+  <ion-card-content>
+    <ion-item>
+      <ion-label position="floating">Lado A</ion-label>
+      <ion-input type="number" [(ngModel)]="ladoA" name="ladoA" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Lado B</ion-label>
+      <ion-input type="number" [(ngModel)]="ladoB" name="ladoB" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Lado C</ion-label>
+      <ion-input type="number" [(ngModel)]="ladoC" name="ladoC" required></ion-input>
+    </ion-item>
+
+    <ion-button expand="full" (click)="calcularPerimetro()">Calcular Perímetro</ion-button>
+
+    <ion-text *ngIf="perimetro !== undefined">
+      <p>Perímetro: {{ perimetro }}</p>
+    </ion-text>
+  </ion-card-content>
+</ion-card>
